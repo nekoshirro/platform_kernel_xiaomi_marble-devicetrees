@@ -1,3 +1,8 @@
+ifeq ($(CONFIG_ARCH_CANOE),y)
+dtbo-y += canoe-kiwi-cnss.dtbo
+dtbo-y += canoe-peach-cnss.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SUN),y)
 dtbo-y += sun-kiwi-cnss.dtbo
 dtbo-y += sun-kiwi-cnss-v8.dtbo
@@ -35,6 +40,27 @@ endif
 ifeq ($(CONFIG_ARCH_VOLCANO),y)
 dtbo-y += volcano-qca6750.dtbo
 dtbo-y += volcano6i-peach-cnss.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_TUNA),y)
+dtbo-y += tuna-rcm-wcn7750.dtbo
+dtbo-y += tuna-cdp-wcn7750.dtbo
+dtbo-y += tuna-mtp-wcn7750.dtbo
+dtbo-y += tuna-mtp-qmp1000-wcn7750.dtbo
+dtbo-y += tuna-qrd-wcn7750.dtbo
+dtbo-y += tuna-mtp-kiwi.dtbo
+dtbo-y += tuna-rcm-kiwi.dtbo
+dtbo-y += tuna-atp-kiwi.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_KERA),y)
+dtbo-y += kera-atp-qca6750.dtbo
+dtbo-y += kera-cdp-qca6750.dtbo
+dtbo-y += kera-mtp-qca6750.dtbo
+dtbo-y += kera-rcm-qca6750.dtbo
+dtbo-y += kera-mtp-wcn7750.dtbo
+dtbo-y += kera-qrd-wcn7750.dtbo
+dtbo-y += kera-rcm-wcn7750.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)
