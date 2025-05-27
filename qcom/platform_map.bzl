@@ -178,6 +178,14 @@ _platform_map = {
                 "name": "kerap-iot.dtb",
                 "apq": True,
             },
+            {
+                "name": "kerap-qmb.dtb",
+                "apq": True,
+            },
+            {
+                "name": "kerap-qna.dtb",
+                "apq": True,
+            },
         ],
         "dtbo_list": [
             {
