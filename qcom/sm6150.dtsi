@@ -1318,6 +1318,7 @@
 
 	ufshc_mem: ufshc@1d84000 {
 		compatible = "qcom,ufshc";
+		ufs-qcom-crypto = <&ufs_ice>;
 		reg = <0x1d84000 0x3000>,
 			<0x1d90000 0x8000>;
 		reg-names = "ufs_mem", "ice";
