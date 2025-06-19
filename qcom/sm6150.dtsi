@@ -1443,6 +1443,7 @@
 
 	sdhc_1: sdhci@7c4000 {
 		compatible = "qcom,sdhci-msm-v5";
+		sdhc-msm-crypto = <&sdcc1_ice>;
 		reg = <0x7c4000 0x1000>, <0x7c5000 0x1000>, <0x7C8000 0x8000>;
 		reg-names = "hc", "cqhci", "ice";
 
