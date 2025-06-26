@@ -1,6 +1,7 @@
 ifeq ($(CONFIG_ARCH_CANOE),y)
 dtbo-y += canoe-kiwi-cnss.dtbo
 dtbo-y += canoe-peach-cnss.dtbo
+dtbo-y += canoep-hdk-peach-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_ALOR),y)
