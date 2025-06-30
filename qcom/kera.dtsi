@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 #include <dt-bindings/clock/qcom,cambistmclkcc-sun.h>
@@ -1689,12 +1689,16 @@
 			reg = <0x14b 0x1>;
 			bits = <7 1>;
 		};
+
+		boot_config: boot_config@600 {
+			reg = <0x600 0x1>;
+		};
 	};
 
 	 qfprom_sys: qfprom@0 {
 		compatible = "qcom,qfprom-sys";
-		nvmem-cells = <&feat_conf6>, <&feat_conf18>;
-		nvmem-cell-names = "feat_conf6", "feat_conf18";
+		nvmem-cells = <&feat_conf6>, <&feat_conf18>, <&boot_config>;
+		nvmem-cell-names = "feat_conf6", "feat_conf18", "boot_config";
 	};
 
 	wpss_pas: remoteproc-wpss@97000000 {
