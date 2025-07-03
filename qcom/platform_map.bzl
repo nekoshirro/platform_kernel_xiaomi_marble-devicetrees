@@ -169,8 +169,13 @@ _platform_map = {
     "kera": {
         "dtb_list": [
             {"name": "kera.dtb"},
+            {"name": "kera-iot.dtb"},
             {
                 "name": "kerap.dtb",
+                "apq": True,
+            },
+            {
+                "name": "kerap-iot.dtb",
                 "apq": True,
             },
         ],
