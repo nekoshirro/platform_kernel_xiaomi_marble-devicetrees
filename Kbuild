@@ -10,6 +10,7 @@ dtbo-y += alor-mtp-wcn7750.dtbo
 dtbo-y += alor-qrd-wcn7750.dtbo
 dtbo-y += alor-rcm-wcn7750.dtbo
 dtbo-y += alor-atp-peach.dtbo
+dtbo-y += alor-cdp-peach.dtbo
 dtbo-y += alor-mtp-peach.dtbo
 dtbo-y += alor-qrd-peach.dtbo
 dtbo-y += alor-rcm-peach.dtbo
