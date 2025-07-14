@@ -162,7 +162,7 @@
 					"wlan-ep-powersave-smp2p-out";
 
 		qcom,qmp = <&aoss_qmp>;
-		qcom,vreg_ol_cpr ="s2d";
+		qcom,vreg_ol_cpr ="S2D0";
 
 		interconnects =
 		<&pcie_anoc MASTER_PCIE_0 &pcie_anoc SLAVE_ANOC_PCIE_GEM_NOC>,
