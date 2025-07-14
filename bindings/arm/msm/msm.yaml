@@ -141,6 +141,10 @@ properties:
               - qcom,qrd
           - const: qcom,montaguep
 
+      - description: Qualcomm Technologies, Inc. MONTAGUE QMB
+        items:
+          - const: qcom,montague-qmb
+
       - description: Qualcomm Technologies, Inc. TUNA
         items:
           - enum:
