@@ -119,6 +119,7 @@ dtbo-y += seraph-advance-peach-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
+dtbo-y += sa8797p-sdp8-vm-cnss.dtbo
 dtbo-y += sa8797p-gunyah-vm-cnss.dtbo
 dtbo-y += lemans-gh-vm-cnss.dtbo
 dtbo-y += monaco-vm-cnss.dtbo
