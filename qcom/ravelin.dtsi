@@ -56,6 +56,24 @@
 		status = "disabled";
 	};
 
+	qcom,gunyah-panic-notifier {
+		compatible = "qcom,gh-panic-notifier";
+		qcom,primary-vm;
+		gunyah-label = <9>;
+		peer-name = <2>;
+		memory-region = <&vm_comm_mem>;
+		shared-buffer-size = <0x1000>;
+	};
+
+	dmesg-dump {
+		compatible = "qcom,dmesg-dump";
+			qcom,primary-vm;
+			gunyah-label = <7>;
+			peer-name = <2>;
+			 memory-region = <&vm_comm_mem>;
+			 shared-buffer-size = <0x1000>;
+	 };
+
 	mmio_sram: mmio-sram@17D09100 {
 		#address-cells = <2>;
 		#size-cells = <2>;
@@ -2450,16 +2468,25 @@
 		status = "ok";
 	};
 
-	qrtr-gunyah {
+	trust_ui_vm_qrtr: qcom,qrtr-gunyah-tuivm {
 		compatible = "qcom,qrtr-gunyah";
 		qcom,master;
 		gunyah-label = <3>;
 		peer-name = <2>;
-		shared-buffer = <&trust_ui_vm_qrtr>;
 	};
 
-	trust_ui_vm: qcom,trust_ui_vm@e55fc000 {
-		reg = <0xe55fc000 0x104000>;
+	trust_ui_vm_vblk0_ring: trust_ui_vm_vblk0_ring {
+		size = <0x4000>;
+		gunyah-label = <0x11>;
+	};
+
+	trust_ui_vm_swiotlb: trust_ui_vm_swiotlb {
+		size = <0x100000>;
+		gunyah-label = <0x12>;
+	};
+
+	trust_ui_vm: qcom,trust_ui_vm {
+		shared-buffers-size = <0x104000>;
 		vm_name = "trustedvm";
 		shared-buffers = <&trust_ui_vm_vblk0_ring &trust_ui_vm_swiotlb>;
 	};
@@ -2473,8 +2500,9 @@
 		compatible = "qcom,gh-secure-vm-loader";
 		qcom,pas-id = <28>;
 		qcom,vmid = <45>;
+		qcom,keep-running;
 		qcom,firmware-name = "trustedvm";
-		memory-region = <&trust_ui_vm_mem>;
+		memory-region = <&trust_ui_vm_mem &vm_comm_mem>;
 		virtio-backends = <&trust_ui_vm_virt_be0>;
 	};
 
@@ -2482,6 +2510,7 @@
 		compatible = "qcom,gh-secure-vm-loader";
 		qcom,pas-id = <35>;
 		qcom,vmid = <50>;
+		qcom,keep-running;
 		qcom,firmware-name = "cpusys_vm";
 		memory-region = <&cpusys_vm_mem>;
 		ext-region = <&chipinfo_mem>;
