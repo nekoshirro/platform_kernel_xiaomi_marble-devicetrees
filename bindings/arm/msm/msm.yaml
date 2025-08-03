@@ -205,6 +205,14 @@ properties:
               - qcom,rcm
           - const: qcom,kerap
 
+      - description: Qualcomm Technologies, Inc. KERAP QMB
+        items:
+          - const: qcom,kerap-qmb
+
+      - description: Qualcomm Technologies, Inc. KERAP QNA
+        items:
+          - const: qcom,kerap-qna
+
       - description: Qualcomm Technologies, Inc. MONACO
         items:
           - enum:
