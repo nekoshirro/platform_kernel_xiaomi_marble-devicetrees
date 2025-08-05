@@ -27,7 +27,7 @@
 	#size-cells = <2>;
 
 	chosen {
-		bootargs = "log_buf_len=2M earlycon=msm_geni_serial,0x880000 rcupdate.rcu_expedited=1 rcu_nocbs=0-7 kpti=off";
+		bootargs = "log_buf_len=2M earlycon=msm_geni_serial,0x880000 rcupdate.rcu_expedited=1 rcu_nocbs=0-7 kpti=off fw_devlink.strict=1";
 	};
 
 	memory { device_type = "memory"; reg = <0 0 0 0>; };
