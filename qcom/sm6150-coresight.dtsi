@@ -1365,7 +1365,7 @@
 		coresight-name = "coresight-eud";
 		qcom,dummy-sink;
 
-		out-ports {
+		in-ports {
 			port {
 				eud_in_replicator_swao: endpoint {
 					remote-endpoint =
