@@ -1141,6 +1141,7 @@
 
 		coresight-name = "coresight-replicator-swao";
 
+		qcom,replicator-loses-context;
 		clocks = <&aoss_qmp>;
 		clock-names = "apb_pclk";
 
