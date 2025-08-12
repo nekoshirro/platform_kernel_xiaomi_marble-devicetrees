@@ -1,6 +1,19 @@
 ifeq ($(CONFIG_ARCH_CANOE),y)
 dtbo-y += canoe-kiwi-cnss.dtbo
 dtbo-y += canoe-peach-cnss.dtbo
+dtbo-y += canoep-hdk-peach-cnss.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_ALOR),y)
+dtbo-y += alor-cdp-wcn7750.dtbo
+dtbo-y += alor-mtp-wcn7750.dtbo
+dtbo-y += alor-qrd-wcn7750.dtbo
+dtbo-y += alor-rcm-wcn7750.dtbo
+dtbo-y += alor-atp-peach.dtbo
+dtbo-y += alor-cdp-peach.dtbo
+dtbo-y += alor-mtp-peach.dtbo
+dtbo-y += alor-qrd-peach.dtbo
+dtbo-y += alor-rcm-peach.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SUN),y)
@@ -48,6 +61,7 @@ dtbo-y += tuna-cdp-wcn7750.dtbo
 dtbo-y += tuna-mtp-wcn7750.dtbo
 dtbo-y += tuna-mtp-qmp1000-wcn7750.dtbo
 dtbo-y += tuna-qrd-wcn7750.dtbo
+dtbo-y += tuna-qrd-kiwi.dtbo
 dtbo-y += tuna-mtp-kiwi.dtbo
 dtbo-y += tuna-rcm-kiwi.dtbo
 dtbo-y += tuna-atp-kiwi.dtbo
@@ -61,6 +75,18 @@ dtbo-y += kera-rcm-qca6750.dtbo
 dtbo-y += kera-mtp-wcn7750.dtbo
 dtbo-y += kera-qrd-wcn7750.dtbo
 dtbo-y += kera-rcm-wcn7750.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SERAPH),y)
+dtbo-y += seraph-peach-cnss.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_QTI_VM),y)
+dtbo-y += sa8797p-gunyah-vm-cnss.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_YUPIK),y)
+dtbo-y += lahaina-qca6490-cnss.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)
