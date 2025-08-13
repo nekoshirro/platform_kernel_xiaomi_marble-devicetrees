@@ -1154,18 +1154,18 @@
 			 * over ETR
 			 */
 			port@0 {
-				reg = <1>;
-				replicator_swao_out_eud: endpoint {
+				reg = <0>;
+				replicator_swao_out_funnel_in1: endpoint {
 					remote-endpoint =
-					  <&eud_in_replicator_swao>;
+					  <&funnel_in1_in_replicator_swao>;
 				};
 			};
 
 			port@1 {
-				reg = <0>;
-				replicator_swao_out_funnel_in1: endpoint {
+				reg = <1>;
+				replicator_swao_out_eud: endpoint {
 					remote-endpoint =
-					<&funnel_in1_in_replicator_swao>;
+					<&eud_in_replicator_swao>;
 				};
 			};
 		};
