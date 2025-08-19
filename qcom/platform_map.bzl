@@ -214,6 +214,8 @@ _platform_map = {
             {"name": "kera-rcm-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs3-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs4-overlay.dtbo"},
+            {"name": "kera-idp-emmc-overlay.dtbo"},
+            {"name": "kera-idp-ufs3-overlay.dtbo"},
         ],
     },
     "kera-le": {
@@ -252,6 +254,8 @@ _platform_map = {
             {"name": "kera-rcm-wcn7750-ufs2-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs3-overlay.dtbo"},
             {"name": "kera-rcm-wcn7750-ufs4-overlay.dtbo"},
+            {"name": "kera-idp-emmc-overlay.dtbo"},
+            {"name": "kera-idp-ufs3-overlay.dtbo"},
         ],
     },
     "parrot-tuivm": {

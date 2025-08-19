@@ -101,7 +101,9 @@ KERA_BOARDS += \
 		kera-rcm-qca6750-ufs3-overlay.dtbo \
 		kera-rcm-wcn7750-ufs2-overlay.dtbo \
 		kera-rcm-wcn7750-ufs3-overlay.dtbo \
-		kera-rcm-wcn7750-ufs4-overlay.dtbo
+		kera-rcm-wcn7750-ufs4-overlay.dtbo \
+		kera-idp-emmc-overlay.dtbo \
+		kera-idp-ufs3-overlay.dtbo
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
