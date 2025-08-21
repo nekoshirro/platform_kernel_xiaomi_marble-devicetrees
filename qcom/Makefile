@@ -76,8 +76,8 @@ sun-dtb-$(CONFIG_ARCH_TUNA) +=  \
 sun-overlays-dtb-$(CONFIG_ARCH_TUNA) += $(TUNA_BOARDS) $(NOAPQ_TUNA_BOARDS) $(TUNA_BASE_DTB) $(TUNA_APQ_BASE_DTB)
 dtb-y += $(sun-dtb-y)
 
-KERA_BASE_DTB += kera.dtb
-KERA_APQ_BASE_DTB += kerap.dtb
+KERA_BASE_DTB += kera.dtb kera-iot.dtb
+KERA_APQ_BASE_DTB += kerap.dtb kerap-iot.dtb kerap-qmb.dtb kerap-qna.dtb
 KERA_BOARDS += \
 		kera-atp-overlay.dtbo \
 		kera-mtp-qca6750-ufs4-overlay.dtbo \
