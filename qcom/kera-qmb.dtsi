@@ -3,10 +3,10 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include "kerap.dtsi"
+#include "kera.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. KeraP QMB SoC";
-	compatible = "qcom,kerap-qmb";
+	model = "Qualcomm Technologies, Inc. Kera QMB SoC";
+	compatible = "qcom,kera-qmb";
 	qcom,msm-id = <720 0x10000>;
 };

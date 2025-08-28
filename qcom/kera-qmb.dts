@@ -5,10 +5,10 @@
 
 /dts-v1/;
 
-#include "kerap-qmb.dtsi"
+#include "kera-qmb.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. KeraP QMB SoC";
-	compatible = "qcom,kerap-qmb";
+	model = "Qualcomm Technologies, Inc. Kera QMB SoC";
+	compatible = "qcom,kera-qmb";
 	qcom,board-id = <0 0>;
 };
