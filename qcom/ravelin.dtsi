@@ -2500,7 +2500,6 @@
 #include "ravelin-qupv3.dtsi"
 #include "ravelin-regulators.dtsi"
 #include "ravelin-pcie.dtsi"
-#include "ravelin-wcn6750.dtsi"
 
 &qupv3_se7_2uart {
 	status = "ok";
