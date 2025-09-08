@@ -178,8 +178,8 @@ _platform_map = {
                 "apq": True,
             },
             {
-                "name": "kerap-qmb.dtb",
-                "apq": True,
+                "name": "kera-qmb.dtb",
+                "apq": False,
             },
             {
                 "name": "kerap-qna.dtb",
