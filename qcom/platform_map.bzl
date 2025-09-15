@@ -125,7 +125,6 @@ _platform_map = {
             {"name": "sunp-hdk-overlay.dtbo"},
             {"name": "sun-rumi-overlay.dtbo"},
         ],
-        "binary_compatible_with": ["tuna", "kera"],
     },
     "qcs610": {
         "dtb_list": [
