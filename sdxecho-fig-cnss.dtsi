@@ -101,6 +101,7 @@
 		platform-name-required;
 		qcom,same-dt-multi-dev;
 
+		cx-mode = <0>;
 		vdd-wlan-io-supply = <&vreg_l6b_1p8>;
 		qcom,vdd-wlan-io-config = <1800000 1800000 30000 0 0>;
 		vdd-wlan-io12-supply = <&vreg_l15b_1p2>;
@@ -108,7 +109,7 @@
 		vdd-wlan-cx-supply = <&vreg_s1k_0p9>;
 		qcom,vdd-wlan-cx-config = <892000 1000000 0 0 0>;
 		vdd-wlan-aon-supply = <&vreg_s7b_0p9>;
-		qcom,vdd-wlan-aon-config = <9500000 9500000 0 0 0>;
+		qcom,vdd-wlan-aon-config = <950000 1060000 0 0 0>;
 		vdd-wlan-rfa1-supply = <&vreg_s4b_1p8>;
 		qcom,vdd-wlan-rfa1-config = <1876000 2000000 0 0 0>;
 		vdd-wlan-rfa2-supply = <&vreg_s2b_1p2>;
@@ -120,35 +121,38 @@
 	};
 };
 
-&pcie0_rp {
-
-	cnss_pci0: cnss_pci0 {
-		reg = <0 0 0 0 0>;
-		qcom,iommu-group = <&cnss_pci_iommu_group0>;
-		memory-region = <&cnss_wlan_mem &cnss_pci0_iommu_region_partition>;
-
-		#address-cells = <1>;
-		#size-cells = <1>;
-
-		cnss_pci0_iommu_region_partition: cnss_pci0_iommu_region_partition {
-			/* address-cells =3 size-cells=2 from sdxkova-pcie.dtsi */
-			iommu-addresses = <&cnss_pci0 0x0 0x0 0x0 0x0 0xA0000000>,
-					  <&cnss_pci0 0x0 0x0 0xB0000000 0x0 0x50000000>;
-		};
-
-		cnss_pci_iommu_group0: cnss_pci_iommu_group0 {
-			qcom,iommu-msi-size = <0x1000>;
-			qcom,iommu-geometry = <0xa0000000 0x10010000>;
-			qcom,iommu-dma = "fastmap";
-			qcom,iommu-pagetable = "coherent";
-			qcom,iommu-faults = "stall-disable", "HUPCF", "no-CFRE",
-					    "non-fatal";
-		};
-	};
-
-};
-
 &pcie0 {
 	qcom,boot-option = <0x1>;
+	status = "ok";
+
+	pcie0_rp: pcie0_rp {
+		reg = <0 0 0 0 0>;
+		cnss_pci0: cnss_pci0 {
+			reg = <0 0 0 0 0>;
+			qcom,iommu-group = <&cnss_pci_iommu_group0>;
+			memory-region = <&cnss_wlan_mem &cnss_pci0_iommu_region_partition>;
+
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			cnss_pci0_iommu_region_partition: cnss_pci0_iommu_region_partition {
+				/* address-cells =3 size-cells=2 from sdxkova-pcie.dtsi */
+				iommu-addresses = <&cnss_pci0 0x0 0x0 0x0 0x0 0xA0000000>,
+						  <&cnss_pci0 0x0 0x0 0xB0000000 0x0 0x50000000>;
+			};
+
+			cnss_pci_iommu_group0: cnss_pci_iommu_group0 {
+				qcom,iommu-msi-size = <0x1000>;
+				qcom,iommu-geometry = <0xa0000000 0x10010000>;
+				qcom,iommu-dma = "fastmap";
+				qcom,iommu-pagetable = "coherent";
+				qcom,iommu-faults = "stall-disable", "HUPCF", "no-CFRE",
+						    "non-fatal";
+			};
+		};
+	};
+};
+
+&pcie0_phy {
 	status = "ok";
 };
