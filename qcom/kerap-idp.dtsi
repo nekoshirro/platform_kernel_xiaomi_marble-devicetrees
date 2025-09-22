@@ -5,6 +5,39 @@
 
 #include <dt-bindings/gpio/gpio.h>
 
+&soc {
+	pinn_r8125_vreg: pinn_r8125_vreg {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "pinn_r8125_vreg";
+		gpio = <&tlmm 155 GPIO_ACTIVE_HIGH>;
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		enable-active-high;
+		regulator-enable-ramp-delay = <200000>;
+	};
+
+	eth_group: eth_group {
+		qcom,iommu-dma-addr-pool = <0x87f10000 0x07f00000>;
+		qcom,iommu-dma = "atomic";
+	};
+};
+
+&pcie0 {
+	vreg-3p3-supply = <&pinn_r8125_vreg>;
+	status = "ok";
+};
+
+&pcie0_rp {
+	reg = <0 0 0 0 0>;
+	dma-coherent;
+	qcom,iommu-group = <&eth_group>;
+	pci-ids =
+	"10ec:8125",
+	"10ec:3000";
+};
+
+
+
 &sdhc_2 {
 	vdd-supply = <&L13B>;
 	qcom,vdd-voltage-level = <2960000 2960000>;
