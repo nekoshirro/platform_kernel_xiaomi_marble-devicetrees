@@ -257,6 +257,15 @@ properties:
        Boolean property to decide whether
        platform name required.
 
+   fig-direct-cx:
+     description: |
+       Boolean property to decide whether chip is fig before device id is
+       determined during PCIe enumeration.
+
+   cx-mode:
+     description: |
+       Indicates the required method to handle the CX rail.
+
    chip_cfg@X:
      description: represent chip specific configurations
      enum:
