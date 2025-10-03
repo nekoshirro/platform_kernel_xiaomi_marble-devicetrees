@@ -84,7 +84,7 @@
 		qcom,wlan-sw-ctrl-gpio = <&tlmm 41 0>;
 		wlan-en-gpio = <&tlmm 76 0>;
 		wlan-dev-sol-gpio = <&tlmm 80 0>;
-		wlan-host-sol-gpio = <&tlmm 81 0>;
+		cnss-direct-cx-host-sol-init-gpio = <&tlmm 81 0>;
 		/* List of GPIOs to be setup for interrupt wakeup capable */
 		mpm_wake_set_gpios = <40 41>;
 		pinctrl-names = "wlan_en_active", "wlan_en_sleep", "sw_ctrl",
@@ -114,6 +114,13 @@
 		qcom,vdd-wlan-rfa1-config = <1876000 2000000 0 0 0>;
 		vdd-wlan-rfa2-supply = <&vreg_s2b_1p2>;
 		qcom,vdd-wlan-rfa2-config = <1328000 1340000 0 0 0>;
+
+		qcom,qmp = <&aoss_qmp>;
+		qcom,pdc_init_table =
+			" {class: wlan_pdc, ss: bb, res: pdc, enable: 1}",
+			" {class: wlan_pdc, ss: bb, res: S1K0.v, upval: 890}",
+			" {class: wlan_pdc, ss: bb, res: S1K0.v, dwnval: 420}",
+			" {class: wlan_pdc, ss: bb, res: S1K0.e, enable: 1}";
 
 		cnss_cdev_apss: qcom,cnss_cdev1 {
 			#cooling-cells = <2>;
