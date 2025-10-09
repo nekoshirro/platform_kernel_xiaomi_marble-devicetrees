@@ -2839,12 +2839,12 @@
 		operating-points-v2 = <&sdhc1_opp_table>;
 
 		qos0 {
-			mask = <0xf0>;
+			mask = <0xf8>;
 			vote = <44>;
 		};
 
 		qos1 {
-			mask = <0x0f>;
+			mask = <0x07>;
 			vote = <44>;
 		};
 	};
