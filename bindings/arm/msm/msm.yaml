@@ -209,9 +209,9 @@ properties:
               - qcom,rcm
           - const: qcom,kerap
 
-      - description: Qualcomm Technologies, Inc. KERAP QMB
+      - description: Qualcomm Technologies, Inc. KERA QMB
         items:
-          - const: qcom,kerap-qmb
+          - const: qcom,kera-qmb
 
       - description: Qualcomm Technologies, Inc. KERAP QNA
         items:
