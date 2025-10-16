@@ -1,3 +1,14 @@
+ifeq ($(CONFIG_ARCH_ART),y)
+dtbo-y += art-atp-fig.dtbo
+dtbo-y += art-cdp-fig.dtbo
+dtbo-y += art-mtp-fig.dtbo
+dtbo-y += art-mtp-peach.dtbo
+dtbo-y += art-omtp-fig.dtbo
+dtbo-y += art-qrd-fig.dtbo
+dtbo-y += art-rcm-fig.dtbo
+dtbo-y += art-rcm-peach.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SDXECHO),y)
 dtbo-y += sdxecho-fig-cnss.dtbo
 endif

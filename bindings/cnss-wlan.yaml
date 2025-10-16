@@ -266,6 +266,11 @@ properties:
      description: |
        Indicates the required method to handle the CX rail.
 
+   cnss-direct-cx-host-sol-init-gpio:
+     description: |
+       Repurposed Host SOL GPIO pin to be used during power on and
+       power off for fig.
+
    chip_cfg@X:
      description: represent chip specific configurations
      enum:
