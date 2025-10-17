@@ -4,14 +4,14 @@
  */
 
 #include <dt-bindings/interconnect/qcom,art.h>
+#include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
 
 &pmh0104_gpios {
 	cnss_wlan_en_active: cnss_wlan_en_active {
 		pins = "gpio8";
 		function = "normal";
-		qcom,drive-strength = <1>; /*HIGH*/
+		qcom,drive-strength = <PMIC_GPIO_STRENGTH_HIGH>;
 		input-disable;
-		output-enable;
 		output-high;
 		power-source = <1>; /* 1.2 V */
 	};
@@ -19,9 +19,8 @@
 	cnss_wlan_en_sleep: cnss_wlan_en_sleep {
 		pins = "gpio8";
 		function = "normal";
-		qcom,drive-strength = <3>; /*LOW*/
+		qcom,drive-strength = <PMIC_GPIO_STRENGTH_LOW>;
 		input-disable;
-		output-enable;
 		output-low;
 	};
 };
@@ -114,7 +113,7 @@
 		vdd-wlan-rfa2-supply = <&S3C>;
 		qcom,vdd-wlan-rfa2-config = <1328000 1400000 0 0 1>;
 		vdd-wlan-ant-share-supply = <&L3K>;
-		qcom,vdd-wlan-ant-share-config = <2000000 2000000 25 0 1>;
+		qcom,vdd-wlan-ant-share-config = <1256000  1256000 25 0 1>;
 
 		qcom,vreg_pdc_map =
 			"S1J1", "bb",
@@ -184,6 +183,10 @@
 		 * <cpumask_for_rx_interrupts cpumask_for_tx_comp_interrupts>
 		 */
 		wlan-txrx-intr-cpumask = <0x3 0x30>;
+
+		qcom,pdc_mode_vote_table =
+			" {class: wlan_pdc, ss: rf, res: L3K1.m, enable: 1}",
+			" {class: wlan_pdc, ss: rf, res: L3K1.m, dwnval: 2}";
 
 		/* PMIC reg & regulator for XOCAL purpose
 		 */
