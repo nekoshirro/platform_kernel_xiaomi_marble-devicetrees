@@ -132,6 +132,9 @@
 	qcom,boot-option = <0x1>;
 	status = "ok";
 
+	/* Ensure that PCIe RC driver probe is deferred until CNSS is probed */
+	dummy-supply = <&wlan_fig>;
+
 	pcie0_rp: pcie0_rp {
 		reg = <0 0 0 0 0>;
 		cnss_pci0: cnss_pci0 {
