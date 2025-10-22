@@ -96,7 +96,7 @@
 		pinctrl-4 = <&cnss_host_sol_default>;
 		qcom,wlan;
 		qcom,wlan-rc-num = <0>;
-		qcom,wlan-ramdump-dynamic = <0x500000>;
+		qcom,wlan-ramdump-dynamic = <0x780000>;
 		use-pm-domain;
 		platform-name-required;
 		qcom,same-dt-multi-dev;
