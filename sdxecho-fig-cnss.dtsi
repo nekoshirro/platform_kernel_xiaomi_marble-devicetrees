@@ -128,39 +128,36 @@
 	};
 };
 
+&pcie0_port0 {
+	cnss_pci0: cnss_pci0 {
+		reg = <0 0 0 0 0>;
+		qcom,iommu-group = <&cnss_pci_iommu_group0>;
+		memory-region = <&cnss_wlan_mem &cnss_pci0_iommu_region_partition>;
+		#address-cells = <1>;
+		#size-cells = <1>;
+		cnss_pci0_iommu_region_partition: cnss_pci0_iommu_region_partition {
+			/* address-cells =3 size-cells=2 from sdxkova-pcie.dtsi */
+			iommu-addresses = <&cnss_pci0 0x0 0x0 0x0 0x0 0xA0000000>,
+					  <&cnss_pci0 0x0 0x0 0xB0000000 0x0 0x50000000>;
+		};
+
+		cnss_pci_iommu_group0: cnss_pci_iommu_group0 {
+			qcom,iommu-msi-size = <0x1000>;
+			qcom,iommu-geometry = <0xa0000000 0x10010000>;
+			qcom,iommu-dma = "fastmap";
+			qcom,iommu-pagetable = "coherent";
+			qcom,iommu-faults = "stall-disable", "HUPCF", "no-CFRE",
+					    "non-fatal";
+		};
+	};
+};
+
 &pcie0 {
 	qcom,boot-option = <0x1>;
 	status = "ok";
 
 	/* Ensure that PCIe RC driver probe is deferred until CNSS is probed */
 	dummy-supply = <&wlan_fig>;
-
-	pcie0_rp: pcie0_rp {
-		reg = <0 0 0 0 0>;
-		cnss_pci0: cnss_pci0 {
-			reg = <0 0 0 0 0>;
-			qcom,iommu-group = <&cnss_pci_iommu_group0>;
-			memory-region = <&cnss_wlan_mem &cnss_pci0_iommu_region_partition>;
-
-			#address-cells = <1>;
-			#size-cells = <1>;
-
-			cnss_pci0_iommu_region_partition: cnss_pci0_iommu_region_partition {
-				/* address-cells =3 size-cells=2 from sdxkova-pcie.dtsi */
-				iommu-addresses = <&cnss_pci0 0x0 0x0 0x0 0x0 0xA0000000>,
-						  <&cnss_pci0 0x0 0x0 0xB0000000 0x0 0x50000000>;
-			};
-
-			cnss_pci_iommu_group0: cnss_pci_iommu_group0 {
-				qcom,iommu-msi-size = <0x1000>;
-				qcom,iommu-geometry = <0xa0000000 0x10010000>;
-				qcom,iommu-dma = "fastmap";
-				qcom,iommu-pagetable = "coherent";
-				qcom,iommu-faults = "stall-disable", "HUPCF", "no-CFRE",
-						    "non-fatal";
-			};
-		};
-	};
 };
 
 &pcie0_phy {
