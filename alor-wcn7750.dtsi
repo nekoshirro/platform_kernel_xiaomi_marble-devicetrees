@@ -188,12 +188,12 @@
 			<30000 2160000>,
 			/* high: 240-1200 Mbps snoc/anoc: 100 Mhz */
 			<100000 2160000>,
-			/* very high: > 1200 Mbps snoc/anoc: 403 Mhz */
-			<175000 5624000>,
-			/* ultra high: DBS mode snoc/anoc: 403 Mhz */
-			<312500 5624000>,
-			/* super high: DBS mode snoc/anoc: 533 Mhz */
-			<587500 7565000>,
+			/* very high: 1200-2000 Mbps snoc/anoc: 100 Mhz */
+			<250000 2160000>,
+			/* ultra high: DBS mode snoc/anoc: 200 Mhz */
+			<312500 2800000>,
+			/* super high: DBS mode snoc/anoc: 403 Mhz */
+			<587500 5624000>,
 			/* low (latency critical): 18-60 Mbps snoc/anoc: 200 Mhz */
 			<7500 2800000>,
 
@@ -207,8 +207,8 @@
 			<30000 1200000>,
 			/* high: 240-1200 Mbps ddr: 547.2 MHz */
 			<100000 1200000>,
-			/* very high: > 1200 Mbps ddr: 1555 MHz */
-			<175000 6424000>,
+			/* very high: 1200-2000 Mbps ddr: 547.2 MHz */
+			<250000 1200000>,
 			/* ultra high: DBS mode ddr: 2092 MHz */
 			<312500 8395000>,
 			/* super high: DBS mode ddr: 3.2 GHz */
