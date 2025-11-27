@@ -26,6 +26,14 @@ dtbo-y += alor-qrd-peach.dtbo
 dtbo-y += alor-rcm-peach.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_CHORA),y)
+dtbo-y += chora-atp-wcn6450.dtbo
+dtbo-y += chora-cdp-wcn6450.dtbo
+dtbo-y += chora-mtp-wcn6450.dtbo
+dtbo-y += chora-qrd-wcn6450.dtbo
+dtbo-y += chora-rcm-wcn6450.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SUN),y)
 dtbo-y += sun-kiwi-cnss.dtbo
 dtbo-y += sun-kiwi-cnss-v8.dtbo
