@@ -109,6 +109,10 @@ ifeq ($(TARGET_SUPPORT),sa525m)
 dtbo-y += sa525m-cnss.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_KHAJE),y)
+dtbo-y += khaje-cnss.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
