@@ -147,8 +147,6 @@
 		wcn-hw-version = "wcn7750";
 		qcom,wlan-msa-fixed-region = <&wlan_msa_mem>;
 
-//TODO 2p2
-
 		vdd-cx-mx-supply = <&S3B>;
 		qcom,vdd-cx-mx-config = <696000 1012000 0 0 0>;
 		vdd-1.8-xo-supply = <&S1B>;
@@ -175,7 +173,9 @@
 			 " {class: wlan_pdc, ss: rf, res: S2B0.v, upval: 1316}",
 			 " {class: wlan_pdc, ss: rf, res: S3B0.v, upval: 1012}",
 			 " {class: wlan_pdc, ss: rf, res: L3F0.m, enable: 0}",
-			 " {class: wlan_pdc, ss: rf, res: L3F0.v, enable: 0}";
+			 " {class: wlan_pdc, ss: rf, res: L3F0.v, enable: 0}",
+			 " {class: wlan_pdc, ss: rf, res: S6B0.m, enable: 1}",
+			 " {class: wlan_pdc, ss: rf, res: S6B0.v, enable: 1}";
 
 		icnss_cdev_apss: icnss_cdev1 {
 			#cooling-cells = <2>;
