@@ -203,5 +203,17 @@
 		};
 
 	};
-//TODO direct link node
+
+	wlan_direct_link: qcom,icnss-direct-link {
+		compatible = "qcom,icnss-direct-link";
+		iommus = <&apps_smmu 0x080f 0x0>;
+		qcom,iommu-group = <&icnss2_direct_link_iommu_group0>;
+		memory-region = <&direct_link_iommu_region_partition>;
+		dma-coherent;
+
+		direct_link_iommu_region_partition: direct_link_iommu_region_partition {
+			iommu-addresses = <&wlan_direct_link 0x0 0x0 0x0 0xb0000000>,
+				<&wlan_direct_link 0x0 0xc0000000 0x0 0x40000000>;
+		};
+	};
 };
