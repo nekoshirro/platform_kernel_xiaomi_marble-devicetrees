@@ -76,6 +76,8 @@ sun-dtb-$(CONFIG_ARCH_TUNA) +=  \
 sun-overlays-dtb-$(CONFIG_ARCH_TUNA) += $(TUNA_BOARDS) $(NOAPQ_TUNA_BOARDS) $(TUNA_BASE_DTB) $(TUNA_APQ_BASE_DTB)
 dtb-y += $(sun-dtb-y)
 
+ifeq ($(CONFIG_ARCH_KERA_LE), y)
+
 KERA_BASE_DTB += kera.dtb kera-iot.dtb kera-qmb.dtb
 KERA_APQ_BASE_DTB += kerap.dtb kerap-iot.dtb kerap-qna.dtb
 KERA_BOARDS += \
@@ -111,6 +113,46 @@ KERA_BOARDS += \
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
+
+else
+
+KERA_BASE_DTB += kera.dtb kera-iot.dtb kera-qmb.dtb
+KERA_APQ_BASE_DTB += kerap.dtb kerap-iot.dtb kerap-qna.dtb
+KERA_BOARDS += \
+		kera-atp-overlay.dtbo \
+		kera-mtp-qca6750-ufs4-overlay.dtbo \
+		kera-mtp-qca6750-ufs3-overlay.dtbo \
+		kera-mtp-qca6750-qmp1000-overlay.dtbo \
+		kera-mtp-wcn7750-qmp1000-overlay.dtbo \
+		kera-mtp-wcn7750-ufs4-overlay.dtbo \
+		kera-mtp-wcn7750-ufs3-overlay.dtbo \
+		kera-cdp-qca6750-ufs2-overlay.dtbo \
+		kera-cdp-qca6750-ufs3-overlay.dtbo \
+		kera-cdp-qca6750-ufs4-overlay.dtbo \
+		kera-iot-cdp-qca6750-ufs4-overlay.dtbo \
+		kera-cdp-qca6750-ufs4-slt-overlay.dtbo \
+		kera-cdp-emmc-overlay.dtbo \
+		kera-qrd-wcn7750-ufs4-overlay.dtbo \
+		kera-qrd-wcn7750-ufs2-overlay.dtbo \
+		kera-qrd-wcn7750-ufs3-overlay.dtbo \
+		kera-qrd-qca6750-ufs2-overlay.dtbo \
+		kera-rcm-qca6750-ufs4-overlay.dtbo \
+		kera-rcm-qca6750-ufs2-overlay.dtbo \
+		kera-rcm-qca6750-ufs3-overlay.dtbo \
+		kera-rcm-wcn7750-ufs2-overlay.dtbo \
+		kera-rcm-wcn7750-ufs3-overlay.dtbo \
+		kera-rcm-wcn7750-ufs4-overlay.dtbo \
+		kera-rcm-wcn7750-emmc-overlay.dtbo \
+		kera-rcm-wcn7750-ufs3-no-display-overlay.dtbo \
+		kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo \
+		kera-rcm-wcn7750-emmc-no-display-overlay.dtbo \
+		kera-idp-emmc-overlay.dtbo \
+		kera-idp-ufs3-overlay.dtbo
+
+NOAPQ_KERA_BOARDS += \
+		kera-rumi-overlay.dtbo
+
+endif
 
 sun-dtb-$(CONFIG_ARCH_KERA) +=  \
 	$(call add-overlays, $(KERA_BOARDS) $(NOAPQ_KERA_BOARDS),$(KERA_BASE_DTB)) \
