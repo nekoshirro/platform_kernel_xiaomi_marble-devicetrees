@@ -7,6 +7,10 @@ dtbo-y += art-omtp-fig.dtbo
 dtbo-y += art-qrd-fig.dtbo
 dtbo-y += art-rcm-fig.dtbo
 dtbo-y += art-rcm-peach.dtbo
+dtbo-y += arth-mtp-fig.dtbo
+dtbo-y += artl-mtp-fig.dtbo
+dtbo-y += artl-mtp-peach.dtbo
+dtbo-y += artl-qrd-fig.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SDXECHO),y)
