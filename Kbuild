@@ -145,6 +145,11 @@ ifeq ($(CONFIG_ARCH_BENGAL),y)
 dtbo-y += bengal-cnss.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_MONACO),y)
+dtbo-y += monaco-cnss.dtbo
+dtbo-y += monaco-standalone-cnss.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
