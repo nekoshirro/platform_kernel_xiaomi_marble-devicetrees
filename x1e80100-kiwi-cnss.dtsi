@@ -83,6 +83,7 @@
 
 		#address-cells = <1>;
 		#size-cells = <1>;
+		wlan-smmuv3;
 
 		cnss_pci0_iommu_region_partition:
 		cnss_pci0_iommu_region_partition {
