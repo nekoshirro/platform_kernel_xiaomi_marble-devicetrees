@@ -91,10 +91,11 @@
 		reg-names = "msi_addr", "smmu_iova_ipa";
 		qcom,rproc-handle = <&wpss_pas>;
 		iommus = <&apps_smmu 0x0c00 0x1>;
-		wlan-en-gpio =<41>;
-		host-sol-gpio =<42>;
-		dev-sol-gpio =<43>;
-		sw-ctrl-gpio =<40>;
+		wlan-en-gpio = <41 0 0 0 2 0 1 4 0 0 1 255 0 0 1 1>;
+		bt-en-gpio = <2 1 2 1 2 0 1 4 0 0 0 255 0 0 1 1>;
+		host-sol-gpio = <42 2 0 0 5 0 1 4 0 0 1 255 0 0 1 1>;
+		dev-sol-gpio = <43 3 0 0 2 0 1 4 0 0 1 4 1 0 1 1>;
+		sw-ctrl-gpio = <40 4 0 0 2 0 1 4 0 0 1 255 0 0 1 1>;
 		/* List of GPIOs to be setup for interrupt wakeup capable */
 		mpm_wake_set_gpios = <40>;
 		pin_wlan-en-gpio = <&tlmm 41 0>;
