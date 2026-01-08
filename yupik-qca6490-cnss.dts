@@ -7,7 +7,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "lahaina-qca6490-cnss.dtsi"
+#include "yupik-qca6490-cnss.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. YupikP IoT HSP";

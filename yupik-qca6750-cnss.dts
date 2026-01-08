@@ -7,7 +7,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "lahaina-qca6750-cnss.dtsi"
+#include "yupik-qca6750-cnss.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. YUPIK-IOT QRD";
