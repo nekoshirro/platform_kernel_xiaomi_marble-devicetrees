@@ -154,6 +154,10 @@ dtbo-y += monaco-cnss.dtbo
 dtbo-y += monaco-standalone-cnss.dtbo
 endif
 
+ifeq ($(TARGET_SUPPORT),sa510m)
+dtbo-y += sa510m-cnss.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
