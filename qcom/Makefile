@@ -109,7 +109,14 @@ KERA_BOARDS += \
 		kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo \
 		kera-rcm-wcn7750-emmc-no-display-overlay.dtbo \
 		kera-idp-emmc-overlay.dtbo \
-		kera-idp-ufs3-overlay.dtbo
+		kera-idp-ufs3-overlay.dtbo \
+		kera-evk-emmc-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-dmic-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-hat-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-dmic-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-hat-overlay.dtbo \
+		kera-evk-emmc-wcd9378-dmic-overlay.dtbo \
+		kera-evk-emmc-wcd9378-hat-overlay.dtbo
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
@@ -147,7 +154,14 @@ KERA_BOARDS += \
 		kera-rcm-wcn7750-ufs4-no-display-overlay.dtbo \
 		kera-rcm-wcn7750-emmc-no-display-overlay.dtbo \
 		kera-idp-emmc-overlay.dtbo \
-		kera-idp-ufs3-overlay.dtbo
+		kera-idp-ufs3-overlay.dtbo \
+		kera-evk-emmc-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-dmic-overlay.dtbo \
+		kera-evk-emmc-hdmiearc-hat-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-dmic-overlay.dtbo \
+		kera-evk-emmc-lt9611uxd-hat-overlay.dtbo \
+		kera-evk-emmc-wcd9378-dmic-overlay.dtbo \
+		kera-evk-emmc-wcd9378-hat-overlay.dtbo
 
 NOAPQ_KERA_BOARDS += \
 		kera-rumi-overlay.dtbo
