@@ -143,6 +143,7 @@ subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
 
 ifeq ($(CONFIG_ARCH_SDXECHO),y)
+DTC ?= $(objtree)/scripts/dtc/dtc
 %.dtbo: %.dts
 	$(DTC) -O dtb -o $@ -b 0 -@ $<
 endif
