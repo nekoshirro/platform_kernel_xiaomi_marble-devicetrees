@@ -266,6 +266,10 @@ properties:
      description: |
        Indicates the required method to handle the CX rail.
 
+   cx-reg-name:
+     description: |
+       Name of the CX regulator.
+
    cnss-direct-cx-host-sol-init-gpio:
      description: |
        Repurposed Host SOL GPIO pin to be used during power on and
