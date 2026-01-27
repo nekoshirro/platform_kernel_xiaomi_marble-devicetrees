@@ -142,6 +142,33 @@
 
 &qupv3_se4_i2c {
 	status = "ok";
+	expander0: pca953x@38 {
+		compatible = "ti,tca9538";
+		#gpio-cells = <2>;
+		gpio-controller;
+		reg = <0x38>;
+	};
+
+	expander1: pca953x@3C {
+		compatible = "ti,tca9538";
+		#gpio-cells = <2>;
+		gpio-controller;
+		reg = <0x3C>;
+	};
+
+	expander2: pca953x@20 {
+		compatible = "ti,tca9539";
+		#gpio-cells = <2>;
+		gpio-controller;
+		reg = <0x20>;
+	};
+
+	expander3: pca953x@21 {
+		compatible = "ti,tca9539";
+		#gpio-cells = <2>;
+		gpio-controller;
+		reg = <0x21>;
+	};
 
 	pcie1_i2c_ctrl: pcie1_i2c_ctrl {
 		compatible = "qcom,pcie-i2c-ntn3";
