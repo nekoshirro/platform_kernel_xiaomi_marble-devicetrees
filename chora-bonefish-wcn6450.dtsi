@@ -7,6 +7,6 @@
 #include "chora-wcn6450.dtsi"
 
 &icnss2 {
-	bt-en-gpio = <0x10010000>;
+	bt-en-gpio = <0 1 1 1 2 0 1 4 0 0 0 255 0 0 1 1>;
 };
 
