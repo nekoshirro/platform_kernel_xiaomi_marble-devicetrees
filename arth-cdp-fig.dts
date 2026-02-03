@@ -12,6 +12,6 @@
 	model = "Qualcomm Technologies, Inc. Arth CDP + Fig WLAN";
 	compatible = "qcom,pebble-cdp", "qcom,arth-cdp", "qcom,cdp", "qcom,arth", "qcom,pebble";
 	qcom,msm-id = <760 0x10000>;
-	qcom,board-id = <0x10001 0x0>;
+	qcom,board-id = <0x50001 0x0>;
 };
 
