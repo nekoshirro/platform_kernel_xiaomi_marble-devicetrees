@@ -158,8 +158,6 @@
 		qcom,vdd-1.8-io-config = <1800000 1800000 0 0 0>;
 		vdd-1.2-io-supply = <&L9F>;
 		qcom,vdd-1.2-io-config = <1200000 1200000 0 0 0>;
-		vdd-2p2-supply = <&S6B>;
-		qcom,vdd-2p2-config = <2200000 2200000 0 0 0>;
 
 		qcom,smem-states = <&smp2p_wlan_1_out 0>,
 				   <&smp2p_wlan_2_out 0>,
