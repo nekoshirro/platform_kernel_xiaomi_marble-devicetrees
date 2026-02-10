@@ -149,6 +149,10 @@ dtbo-y += yupik-qca6490-cnss.dtbo
 dtbo-y += yupik-qca6750-cnss.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_LAHAINA),y)
+dtbo-y += lahaina-qca6490-cnss.dtbo
+endif
+
 ifeq ($(TARGET_SUPPORT),sa525m)
 dtbo-y += sa525m-cnss.dtbo
 endif
