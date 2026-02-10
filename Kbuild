@@ -123,6 +123,7 @@ endif
 ifeq ($(CONFIG_ARCH_SERAPH),y)
 dtbo-y += seraph-peach-cnss.dtbo
 dtbo-y += seraph-advance-peach-cnss.dtbo
+dtbo-y += seraph-qar-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
