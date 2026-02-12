@@ -154,6 +154,13 @@
 		#gpio-cells = <2>;
 		gpio-controller;
 		reg = <0x3C>;
+
+		io-exp-hog6 {
+			gpio-hog;
+			gpios = <6 GPIO_ACTIVE_HIGH>;
+			output-high;
+			line-name = "keye_pwr_en";
+		};
 	};
 
 	expander2: pca953x@20 {
