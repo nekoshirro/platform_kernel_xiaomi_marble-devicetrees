@@ -71,6 +71,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_X1E80100),y)
 dtbo-y += x1e80100-kiwi-cnss.dtbo
+dtbo-y += hamoa_la-kiwi-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN),y)
