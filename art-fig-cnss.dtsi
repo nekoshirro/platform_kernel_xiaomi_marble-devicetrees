@@ -90,7 +90,7 @@
 		pinctrl-4 = <&cnss_host_sol_default>;
 		qcom,wlan;
 		qcom,wlan-rc-num = <0>;
-		qcom,wlan-ramdump-dynamic = <0x780000>;
+		qcom,wlan-ramdump-dynamic = <0x600000>;
 		cnss-enable-self-recovery;
 		use-pm-domain;
 		qcom,same-dt-multi-dev;
