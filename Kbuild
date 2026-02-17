@@ -53,6 +53,10 @@ dtbo-y += chora-cdp-wcn7750.dtbo
 dtbo-y += chora-mtp-wcn7750.dtbo
 dtbo-y += chora-qrd-wcn7750.dtbo
 dtbo-y += chora-rcm-wcn7750.dtbo
+dtbo-y += chora-bonefish-mtp-wcn6450.dtbo
+dtbo-y += chora-bonefish-qrd-wcn6450.dtbo
+dtbo-y += chora-bonefish-mtp-wcn7750.dtbo
+dtbo-y += chora-bonefish-qrd-wcn7750.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SUN),y)
