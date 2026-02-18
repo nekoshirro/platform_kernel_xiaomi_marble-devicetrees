@@ -53,6 +53,20 @@
 				bias-pull-down;
 			};
 		};
+
+		cnss_sw_ctrl_data_0: cnss_sw_ctrl_data_0 {
+			mux {
+				pins = "gpio155";
+				function = "gpio";
+			};
+		};
+
+		cnss_sw_ctrl_data_1: cnss_sw_ctrl_data_1 {
+			mux {
+				pins = "gpio156";
+				function = "gpio";
+			};
+		};
 	};
 };
 
@@ -77,6 +91,8 @@
 		wlan-en-gpio = <&pmh0104_gpios 8 0>;
 		qcom,bt-en-gpio = <&pmh0104_gpios 5 0>;
 		qcom,sw-ctrl-gpio = <&tlmm 18 0>;
+		qcom,sw-ctrl-data-0-gpio = <&tlmm 155 0>;
+		qcom,sw-ctrl-data-1-gpio = <&tlmm 156 0>;
 		cnss-direct-cx-host-sol-init-gpio = <&tlmm 204 0>;
 		/* List of GPIOs to be setup for interrupt wakeup capable */
 		mpm_wake_set_gpios = <18 19>;
