@@ -8,13 +8,13 @@
 
 &soc {
 	qcom,smp2p-wpss {
-		smp2p_wlan_1_in: qcom,smp2p-wlan-1-in {
+		chora_wcn6450_smp2p_wlan_1_in: qcom,smp2p-wlan-1-in {
 			qcom,entry-name = "wlan";
 			interrupt-controller;
 			#interrupt-cells = <2>;
 		};
 
-		smp2p_wlan_1_out: qcom,smp2p-wlan-1-out {
+		chora_wcn6450_smp2p_wlan_1_out: qcom,smp2p-wlan-1-out {
 			qcom,entry-name = "wlan";
 			#qcom,smem-state-cells = <1>;
 		};
@@ -87,7 +87,7 @@
 		vdd-1.8-io-supply = <&L1B>;
 		qcom,vdd-1.8-io-config = <1800000 1800000 0 0 0>;
 
-		qcom,smem-states = <&smp2p_wlan_1_out 0>,
+		qcom,smem-states = <&chora_wcn6450_smp2p_wlan_1_out 0>,
 				   <&smp2p_wlan_2_out 0>,
 				   <&smp2p_wlan_3_out 0>;
 		qcom,smem-state-names = "wlan-smp2p-out",
@@ -107,8 +107,8 @@
 		};
 
 		qcom,smp2p_map_wlan_1_in {
-			interrupts-extended = <&smp2p_wlan_1_in 0 0>,
-					      <&smp2p_wlan_1_in 1 0>;
+			interrupts-extended = <&chora_wcn6450_smp2p_wlan_1_in 0 0>,
+					      <&chora_wcn6450_smp2p_wlan_1_in 1 0>;
 			interrupt-names = "qcom,smp2p-force-fatal-error",
 					  "qcom,smp2p-early-crash-ind";
 		};
