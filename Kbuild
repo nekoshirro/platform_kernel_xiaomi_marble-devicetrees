@@ -125,6 +125,7 @@ dtbo-y += kera-rcm-qca6750.dtbo
 dtbo-y += kera-mtp-wcn7750.dtbo
 dtbo-y += kera-qrd-wcn7750.dtbo
 dtbo-y += kera-rcm-wcn7750.dtbo
+dtbo-y += kera-evk-wcn7760.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SERAPH),y)
