@@ -134,6 +134,10 @@ dtbo-y += seraph-advance-peach-cnss.dtbo
 dtbo-y += seraph-qar-cnss.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_PIKACHU),y)
+dtbo-y += pikachu-peach-cnss.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
 dtbo-y += sa8797p-sdp8-vm-cnss.dtbo
 dtbo-y += sa8797p-gunyah-vm-cnss.dtbo
