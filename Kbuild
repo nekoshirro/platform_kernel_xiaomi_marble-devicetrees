@@ -165,6 +165,10 @@ dtbo-y += monaco-cnss.dtbo
 dtbo-y += monaco-standalone-cnss.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_SHIKRA),y)
+dtbo-y += shikra-cnss.dtbo
+endif
+
 ifeq ($(TARGET_SUPPORT),sa510m)
 dtbo-y += sa510m-cnss.dtbo
 endif
