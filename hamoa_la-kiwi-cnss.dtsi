@@ -4,7 +4,7 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include <dt-bindings/interconnect/qcom,hamoa_la-rpmh.h>
+#include <dt-bindings/interconnect/qcom,x1e80100-rpmh.h>
 
 &tlmm {
 	cnss_pins {
