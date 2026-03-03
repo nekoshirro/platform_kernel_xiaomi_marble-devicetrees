@@ -62,6 +62,10 @@
 		qcom,wlan;
 		qcom,wlan-rc-num = <0>;
 		qcom,sleep-clk-support;
+		cnss-enable-self-recovery;
+		qcom,wlan-cbc-enabled;
+		use-pm-domain;
+		qcom,same-dt-multi-dev;
 	};
 };
 
