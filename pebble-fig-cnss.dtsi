@@ -138,9 +138,13 @@
 		cnss-enable-self-recovery;
 		use-pm-domain;
 		qcom,same-dt-multi-dev;
+		/* For AOP communication, use direct QMP instead of mailbox */
+		qcom,qmp = <&aoss_qmp>;
 		msix-match-addr = <0x3000>;
 		platform-name-required;
 		fig-direct-cx;
+		/*Direct CX in data pin PDC mode*/
+		cx-mode = <2>;
 		cx-reg-name = "S3C0";
 
 		vdd-wlan-aon-supply = <&L2D>;
@@ -211,6 +215,31 @@
 		<1250000 16896000>,
 		/* low (latency critical): 18-60 Mbps ddr: 547.2 MHz */
 		<7500 2188800>;
+
+		/* PDC delta wrt to default attach.
+		 * RF PDC config delta
+		 * voltage change on S7G and S4C
+		 * regulators to be disabled S9D, S3C
+		 * regulators to be enabled, S1J
+		 * S1J upval/dwnval is different
+		 * L3K mode is RM during sleep set
+		 *
+		 * BB PDC to be enabled.
+		 * defaults to FIG.
+		 *
+		 */
+		qcom,pdc_init_table =
+			 " {class: wlan_pdc, ss: rf, res: S7G0.v, upval: 1328}",
+			 " {class: wlan_pdc, ss: rf, res: S7G0.v, dwnval: 1328}",
+			 " {class: wlan_pdc, ss: rf, res: S4C0.v, upval: 1876}",
+			 " {class: wlan_pdc, ss: rf, res: S4C0.v, dwnval: 1876}",
+			 " {class: wlan_pdc, ss: rf, res: S9D0.m, enable: 0}",
+			 " {class: wlan_pdc, ss: rf, res: S9D0.v, enable: 0}",
+			 " {class: wlan_pdc, ss: rf, res: S3C0.e, enable: 0}",
+			 " {class: wlan_pdc, ss: rf, res: S1J1.m, enable: 1}",
+			 " {class: wlan_pdc, ss: rf, res: S1J1.v, enable: 1}",
+			 " {class: wlan_pdc, ss: rf, res: L3K1.m, dwnval: 3}",
+			 " {class: wlan_pdc, ss: bb, res: pdc, enable: 1}";
 
 		/* cpu mask used for wlan tx rx interrupt affinity
 		 * <cpumask_for_rx_interrupts cpumask_for_tx_comp_interrupts>
