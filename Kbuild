@@ -141,6 +141,7 @@ dtbo-y += sa8255p-vm-cnss.dtbo
 dtbo-y += lemans-gh-vm-cnss.dtbo
 dtbo-y += monaco-vm-cnss.dtbo
 dtbo-y += lemans-vm-cnss.dtbo
+dtbo-y += monaco-gh-vm-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_YUPIK),y)
