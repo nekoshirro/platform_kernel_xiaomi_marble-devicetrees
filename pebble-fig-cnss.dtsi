@@ -6,6 +6,26 @@
 #include <dt-bindings/interconnect/qcom,pebble.h>
 #include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
 
+&wlan_msa_mem {
+	status = "disabled";
+};
+
+&wpss_mem {
+	status = "disabled";
+};
+
+&wpss_pas {
+	status = "disabled";
+};
+
+&q6_wpss_dtb_mem {
+	status = "disabled";
+};
+
+&pcie0 {
+	status = "ok";
+};
+
 &pmh0104_c_gpios {
 	cnss_wlan_en_active: cnss_wlan_en_active {
 		pins = "gpio7";
