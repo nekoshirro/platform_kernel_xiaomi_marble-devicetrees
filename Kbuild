@@ -15,8 +15,8 @@ dtbo-y += artl-mtp-peach.dtbo
 dtbo-y += artl-qrd-fig.dtbo
 endif
 
-ifeq ($(CONFIG_ARCH_SDXECHO),y)
-dtbo-y += sdxecho-fig-cnss.dtbo
+ifeq ($(CONFIG_ARCH_ECHO),y)
+dtbo-y += echo-fig-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_X1P42100),y)
@@ -178,7 +178,7 @@ always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
 
-ifeq ($(CONFIG_ARCH_SDXECHO),y)
+ifeq ($(CONFIG_ARCH_ECHO),y)
 DTC ?= $(objtree)/scripts/dtc/dtc
 %.dtbo: %.dts
 	$(DTC) -O dtb -o $@ -b 0 -@ $<
