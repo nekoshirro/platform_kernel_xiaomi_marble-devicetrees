@@ -213,8 +213,8 @@
 			<312500 8395000>,
 			/* super high: DBS mode ddr: 3.2 GHz */
 			<587500 13000000>,
-			/* low (latency critical): 18-60 Mbps ddr: 547.2 MHz */
-			<7500 1200000>;
+			/* low (latency critical): 18-60 Mbps ddr: 2092 MHz */
+			<7500 8395000>;
 		};
 
 		icnss_cdev_apss: icnss_cdev1 {
