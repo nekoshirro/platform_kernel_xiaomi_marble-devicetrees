@@ -116,6 +116,7 @@
 		fig-direct-cx;
 		cx-mode = <2>;
 		cx-reg-name = "S1J1";
+		qcom,pmic-auto-headroom = <24>;
 
 		vdd-wlan-aon-supply = <&L2G>;
 		qcom,vdd-wlan-aon-config = <1800000 1800000 30000 0 1>;

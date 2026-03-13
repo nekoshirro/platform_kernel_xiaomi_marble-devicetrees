@@ -285,6 +285,11 @@ properties:
        Repurposed Host SOL GPIO pin to be used during power on and
        power off for fig.
 
+   qcom,pmic-auto-headroom:
+     description: |
+       Integer value specifying the amount of headroom adjustment in millivolts
+       to subtract during open loop CPR voltage update.
+
    chip_cfg@X:
      description: represent chip specific configurations
      enum:
