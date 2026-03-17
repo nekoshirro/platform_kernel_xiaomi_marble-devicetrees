@@ -521,6 +521,8 @@ _platform_map = {
             {"name": "ravelinp.dtb"},
             {"name": "ravelin-4gb.dtb"},
             {"name": "ravelinp-4gb.dtb"},
+            {"name": "ravelin-cqm.dtb"},
+            {"name": "ravelin-cqs.dtb"},
             {"name": "ravelin-sg.dtb"},
             {"name": "ravelinp-sg.dtb"},
             {"name": "montague.dtb"},
