@@ -7,12 +7,13 @@ dtbo-y += art-omtp-fig.dtbo
 dtbo-y += art-qrd-fig.dtbo
 dtbo-y += art-rcm-fig.dtbo
 dtbo-y += art-rcm-peach.dtbo
-dtbo-y += arth-mtp-fig.dtbo
-dtbo-y += arth-cdp-fig.dtbo
-dtbo-y += arth-rcm-fig.dtbo
-dtbo-y += artl-mtp-fig.dtbo
-dtbo-y += artl-mtp-peach.dtbo
-dtbo-y += artl-qrd-fig.dtbo
+dtbo-y += art-heap-mtp-fig.dtbo
+dtbo-y += art-heap-cdp-fig.dtbo
+dtbo-y += art-heap-rcm-fig.dtbo
+dtbo-y += art-leap-mtp-fig.dtbo
+dtbo-y += art-leap-mtp-peach.dtbo
+dtbo-y += art-leap-qrd-fig.dtbo
+dtbo-y += art-leap-rcm-fig.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_ECHO),y)

@@ -6,7 +6,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "art-fig-cnss.dtsi"
+#include "art-heap-fig-cnss.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Arth MTP + Fig WLAN";

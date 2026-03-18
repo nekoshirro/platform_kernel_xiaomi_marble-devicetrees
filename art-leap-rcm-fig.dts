@@ -9,8 +9,8 @@
 #include "art-fig-cnss.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Arth RCM + Fig WLAN";
-	compatible = "qcom,pebble-rcm", "qcom,arth-rcm", "qcom,rcm", "qcom,arth", "qcom,pebble";
-	qcom,msm-id = <760 0x10000>;
+	model = "Qualcomm Technologies, Inc. Artl MTP + Fig WLAN";
+	compatible = "qcom,art-mtp", "qcom,artl-mtp", "qcom,mtp", "qcom,artl", "qcom,pebble";
+	qcom,msm-id = <755 0x10000>;
 	qcom,board-id = <0x10015 0x0>;
 };
