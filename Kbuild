@@ -60,6 +60,10 @@ dtbo-y += chora-bonefish-mtp-wcn7750.dtbo
 dtbo-y += chora-bonefish-qrd-wcn7750.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_MALABAR),y)
+dtbo-y += malabar-adrastea.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SUN),y)
 dtbo-y += sun-kiwi-cnss.dtbo
 dtbo-y += sun-kiwi-cnss-v8.dtbo
