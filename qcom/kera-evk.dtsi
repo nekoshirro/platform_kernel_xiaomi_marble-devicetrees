@@ -133,18 +133,155 @@
 	periph-6c1-supply = <&L1G>;
 	periph-6c2-supply = <&L2G>;
 	periph-6c3-supply = <&L3G>;
-	periph-c40-supply = <&L1M>;
-	periph-c41-supply = <&L2M>;
-	periph-c42-supply = <&L3M>;
-	periph-c43-supply = <&L4M>;
-	periph-c44-supply = <&L5M>;
-	periph-c45-supply = <&L6M>;
-	periph-c46-supply = <&L7M>;
-	periph-d40-supply = <&L1N>;
-	periph-d41-supply = <&L2N>;
-	periph-d42-supply = <&L3N>;
-	periph-d43-supply = <&L4N>;
-	periph-d44-supply = <&L5N>;
-	periph-d45-supply = <&L6N>;
-	periph-d46-supply = <&L7N>;
+};
+
+&pcie0 {
+	status = "ok";
+	qcom,boot-option = <0x1>;
+};
+
+&qupv3_se4_i2c {
+	status = "ok";
+
+	pcie1_i2c_ctrl: pcie1_i2c_ctrl {
+		compatible = "qcom,pcie-i2c-ntn3";
+		rc-index = <0x1>;
+		reg = <0x77>;
+		gpio-config-reg = <0x801208>;
+		ep-reset-reg = <0x801210>;
+		ep-reset-gpio-mask = <0xc>;
+		version-reg = <0x800000>;
+		dump-regs = <0x801330 0x801350 0x801370>;
+		reg_update = <0x82c030 0x1
+					0x828000 0x3
+					0x82bd00 0x8
+					0x82c030 0x2
+					0x828000 0x3
+					0x82bd00 0x8
+					0x82c030 0x8
+					0x828000 0x1
+					0x82bd00 0x8
+					0x82c01c 0x10
+					0x82c030 0xf
+					0x828000 0xf
+					0x82b268 0x2>;
+		/*FOM for preset caluclation*/
+		switch_reg_update = <0x82c02c 0x00000007
+					0x824a10 0x00000001
+					0x82c030 0x00000008
+					0x828000 0x00000001
+					0x82b074 0x00000020
+					0x82b2bc 0x00000001
+					0x801208 0xFFFFFFF0
+					0x801210 0x4>;
+	};
+};
+
+&pcie1_msi {
+	status = "ok";
+};
+
+&pcie1 {
+	status = "ok";
+
+	pcie-i2c-phandle = <&qupv3_se4_i2c>;
+	qcom,no-client-based-bw-voting;
+
+	iommu-map = <0x0 &apps_smmu 0x1400 0x1>,
+		<0x100 &apps_smmu 0x1401 0x1>,
+		<0x208 &apps_smmu 0x1402 0x1>,
+		<0x210 &apps_smmu 0x1403 0x1>,
+		<0x218 &apps_smmu 0x1404 0x1>,
+		<0x300 &apps_smmu 0x1405 0x1>,
+		<0x400 &apps_smmu 0x1406 0x1>,
+		<0x500 &apps_smmu 0x1407 0x1>,
+		<0x501 &apps_smmu 0x1408 0x1>;
+};
+
+&pcie1_rp {
+	#address-cells = <5>;
+	#size-cells = <0>;
+	/* BDF 1.0.0 */
+	pcie1_bus1_dev0_fn0: pcie1_bus1_dev0_fn0 {
+		reg = <0 0 0 0 0>;
+
+		/* BDF 2.1.0 */
+		pcie1_bus2_dev1_fn0: pcie1_bus2_dev1_fn0 {
+			reg = <0x800 0x0 0x0 0x0 0x0>;
+		};
+
+		/* BDF 2.2.0 */
+		pcie1_bus2_dev2_fn0: pcie1_bus2_dev2_fn0 {
+			reg = <0x1000 0x0 0x0 0x0 0x0>;
+			/* BDF 4.0.0 */
+			pcie1_bus4_dev0_fn0: pcie1_bus4_dev0_fn0 {
+				reg = <0x0 0x0 0x0 0x0 0x0>;
+				#address-cells = <1>;
+				#size-cells = <1>;
+			};
+		};
+
+		/* BDF 2.3.0 */
+		pcie1_bus2_dev3_fn0: pcie1_bus2_dev3_fn0 {
+			reg = <0x1800 0x0 0x0 0x0 0x0>;
+		};
+	};
+};
+
+// Remove Leica2 regulator for EVK.
+
+&L1N {
+	status = "disabled";
+};
+
+&L2N {
+	status = "disabled";
+};
+
+&L3N {
+	status = "disabled";
+};
+
+&L4N {
+	status = "disabled";
+};
+
+&L5N {
+	status = "disabled";
+};
+
+&L6N {
+	status = "disabled";
+};
+
+&L7N {
+	status = "disabled";
+};
+
+&L1M {
+	status = "disabled";
+};
+
+&L2M {
+	status = "disabled";
+};
+
+&L3M {
+	status = "disabled";
+};
+
+&L4M {
+	status = "disabled";
+};
+
+&L5M {
+	status = "disabled";
+};
+
+&L6M {
+	status = "disabled";
+};
+
+&L7M {
+	status = "disabled";
 };
