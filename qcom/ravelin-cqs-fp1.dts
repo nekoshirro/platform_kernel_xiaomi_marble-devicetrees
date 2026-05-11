@@ -14,3 +14,11 @@
 	qcom,msm-id = <774 0x10000>;
 	qcom,softsku-id = <1>;
 };
+
+&pcie0 {
+	status = "okay";
+};
+
+&pcie0_msi {
+	status = "okay";
+};

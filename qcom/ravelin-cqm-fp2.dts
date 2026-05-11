@@ -14,3 +14,11 @@
 	qcom,msm-id = <773 0x10000>;
 	qcom,softsku-id = <2>;
 };
+
+&pcie0 {
+	status = "disabled";
+};
+
+&pcie0_msi {
+	status = "disabled";
+};
