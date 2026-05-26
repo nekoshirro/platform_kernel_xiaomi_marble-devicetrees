@@ -905,6 +905,14 @@
 			qcom,allocate-on-request;
 			label = "modem";
 		};
+
+		qcom,client_md_op1 {
+			compatible = "qcom,memshare-peripheral";
+			qcom,peripheral-size = <0x800000>;
+			qcom,client-id = <9>;
+			memory-region = <&dsm_cma_mem>;
+			label = "modem";
+		};
 	};
 
 	clocks {
